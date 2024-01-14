@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+</head>
+<style>
+  body{
+    background-image: url(/images/BACK.jpg);
+  }
+  {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 500px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 100px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+    color: var(--main-color);
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: var(--main-color);
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: top;
+    height: 100px;
+    width: 700px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description h5 {
+    color:rgb(255, 255, 255);
+    text-align:left ;
+    font-size: l;
+    line-height: 1;
+    vertical-align: top;
+}
+
+.description h4 {
+  text-transform: uppercase;
+    text-align: left;
+    color: white;   
+}
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px; 
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="C1"] {
+    background-image:url(/images/image1.png);
+    opacity: 5;
+}
+
+.card[for="C2"] {
+    background-image: url(/images/NARRUTO.jpg);
+}
+
+.card[for="C3"] {
+    background-image: url(/images/KAKA.jpg);
+}
+
+.card[for="C4"] {
+    background-image: url(/images/SASUKE.jpg);
+}
+</style>
+<body>
+  <section class="portfolio" id="portfolio">
+    <h2 class="heading">Portfolio <span></span></h2>
+    <div class="wrapper">
+        <div class="container">
+            <input type="radio" name="slide" id="C1" checked>
+            <label for="C1" class="card">
+                <div class="row">
+                    <div class="Icon">1</div>
+                    <div class="description">
+                        <h4>ONE PIECE</h4>
+                        <h5> Personnage pricinpale MONKEY LEUFFY un gars ambitieux</h5>
+                    </div>
+                </div> 
+            </label>
+            <input type="radio" name="slide" id="C2" >
+            <label for="C2" class="card">
+                <div class="row">
+                    <div class="Icon">2</div>
+                    <div class="description">
+                        <h4>NARRUTO</h4>
+                        <h5>Naruto Uzumaki est le personnage principal de la série. L'histoire se déroule dans un monde de ninjas, composé de villages cachés et de puissants ninjutsu. Naruto est un jeune ninja rejeté par sa communauté en raison du sceau d'un démon renard à neuf queues qu'il porte en lui depuis sa naissance</h5>
+                    </div>
+                </div> 
+            </label>
+            <input type="radio" name="slide" id="C3" >
+            <label for="C3" class="card">
+                <div class="row">
+                    <div class="Icon">3</div>
+                    <div class="description">
+                        <h4>KAKASHI</h4>
+                        <h5>Kakashi est un ninja du Village caché de Konoha et fait partie de l'équipe 7, aux côtés de Naruto Uzumaki, Sasuke Uchiha et Sakura Haruno. Il est initialement présenté comme le chef d'équipe de cette équipe de jeunes ninjas en formation.</h5>
+                    </div>
+                </div> 
+            </label>
+            <input type="radio" name="slide" id="C4" >
+            <label for="C4" class="card">
+                <div class="row">
+                    <div class="Icon">4</div>
+                    <div class="description">
+                        <h4>SASUKE</h4>
+                        <h5>Sasuke est initialement présenté comme un ninja talentueux du Village caché de Konoha, mais qui est hanté par la perte de sa famille lorsqu'il était enfant. Ses parents, sa famille entière, ont été assassinés par son propre frère aîné, Itachi Uchiha, sous des circonstances mystérieuses. Cette tragédie motive profondément Sasuke à devenir plus fort pour venger sa famille
+                        </h5>
+                    </div>
+                </div> 
+            </label>
+        </div>
+    </div>
+    
+ </section>
+</body>
+</html>
